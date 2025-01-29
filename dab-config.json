@@ -30,24 +30,10 @@
     }
   },
   "entities": {
-    "Actor": {
+    "User": {
       "source": {
-        "object": "dbo.Actor",
-        "type": "table",
-        "key-fields": [
-          "Id"
-        ]
-      },
-      "graphql": {
-        "enabled": true,
-        "type": {
-          "singular": "Actor",
-          "plural": "Actors"
-        }
-      },
-      "rest": {
-        "enabled": true,
-        "path": "/Actor"
+        "object": "dbo.User",
+        "type": "table"
       },
       "permissions": [
         {
@@ -58,48 +44,7 @@
             }
           ]
         }
-      ],
-      "mappings": {
-        "BirthYear": "BirthYear",
-        "Id": "Id",
-        "Name": "Name"
-      }
-    },
-    "Character": {
-      "source": {
-        "object": "dbo.Character",
-        "type": "table",
-        "key-fields": [
-          "Id"
-        ]
-      },
-      "graphql": {
-        "enabled": true,
-        "type": {
-          "singular": "Character",
-          "plural": "Characters"
-        }
-      },
-      "rest": {
-        "enabled": true,
-        "path": "/Character"
-      },
-      "permissions": [
-        {
-          "role": "anonymous",
-          "actions": [
-            {
-              "action": "*"
-            }
-          ]
-        }
-      ],
-      "mappings": {
-        "ActorId": "ActorId",
-        "Id": "Id",
-        "Name": "Name",
-        "Stardate": "Stardate"
-      }
+      ]
     }
   }
 }
