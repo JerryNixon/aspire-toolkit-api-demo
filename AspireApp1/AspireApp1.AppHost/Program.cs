@@ -12,7 +12,7 @@ var sqlproj = builder.AddSqlProject("dacpac")
 
 var api = builder.AddDataAPIBuilder("api", dabconfig)
     .WithReference(sql)
-    .WaitFor(sqlproj);
+    .WaitForCompletion(sqlproj);
 
 builder.AddProject<Projects.ConsoleApp1>("console")
     .WithReference(api);
